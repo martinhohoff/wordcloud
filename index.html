@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Image Cloud Generator</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body style="overflow: hidden;">
+  <div class="container">
+    <h1 id="page-title">Text to Image Cloud Generator</h1>
+
+    <!-- Text Input Area -->
+    <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+
+    <!-- Generate Button -->
+    <button id="generate-button">Generate Cloud</button>
+
+    <!-- Download Button -->
+    <button id="download-button" style="display: none;">Download Image</button>
+
+    <!-- Word Cloud Display -->
+    <div id="word-cloud-container" style="width: 100%; max-width: 800px; height: auto; margin: auto;">
+      <img id="word-cloud-image" style="display: none; width: 100%;" alt="Word Cloud Image">
+    </div>
+  </div>
+
+  <!-- D3.js Library -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+
+  <!-- D3-Cloud Plugin -->
+  <script src="https://unpkg.com/d3-cloud/build/d3.layout.cloud.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    document.getElementById('generate-button').addEventListener('click', () => {
+      document.getElementById('page-title').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- Custom JavaScript -->
+  <script src="assets/script.js"></script>
+</body>
+</html>
